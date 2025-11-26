@@ -8,7 +8,7 @@ const makeId = () =>
     : Math.random().toString(36).slice(2);
 
 export default function App() {
-  const [userId, setUserId] = useState('');
+  const [userId, setUserId] = useState('0123456789');
   const [loggedIn, setLoggedIn] = useState(false);
   const [message, setMessage] = useState('');
   const [chat, setChat] = useState([]);
@@ -147,11 +147,6 @@ export default function App() {
           Tip: keep the tab open while testing; the state is in-memory only.
         </p>
 
-        <p className="small">
-          Endpoint is fixed to <code>{ENDPOINT}</code>. Requests send
-          {' { userId, message }'} and display the reply field from the
-          response.
-        </p>
       </aside>
 
       <section className="main">
